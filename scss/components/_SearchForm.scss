@@ -1,0 +1,26 @@
+.SearchForm {
+
+    .formGroup {
+        @extend .my-1;
+
+        input[type=text] {
+            background-color: darken($bg, 5%);
+        }
+
+        input[type=button] {
+            background-color: $dark;
+            color: #fff;
+        }
+
+        &-check {
+            display: grid;
+            grid-template-columns: max-content auto;
+            grid-gap: 3%;
+
+
+            input[type=checkbox] {
+                height: 100%;
+            }
+        }
+    }
+}

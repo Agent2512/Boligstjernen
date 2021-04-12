@@ -1,0 +1,20 @@
+@import "./global/global-dir", "./pages/pages-dir", "./components/components-dir";
+
+#__next {
+    display: grid;
+    grid-template-columns: auto ($widthOfContent) auto;
+    grid-template-rows: 12% auto;
+    grid-template-areas:
+        "Header Header Header"
+        ". main .";
+
+    .mainHeader {
+        grid-area: Header;
+    }
+
+    main {
+        grid-area: main;
+
+        @extend .mt-1;
+    }
+}

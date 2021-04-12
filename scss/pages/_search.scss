@@ -1,0 +1,12 @@
+#search {
+    @extend %main-grid;
+
+    & > section {
+        display: flex;
+        flex-direction: column;
+
+        .House {
+            @extend .mb-1,
+        }
+    }
+}

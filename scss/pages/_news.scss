@@ -1,0 +1,18 @@
+#news {
+    display: grid;
+    grid-template-rows: max-content auto;
+    grid-gap: 2%;
+    grid-template-areas: 
+    "title"
+    "posts";
+
+    & > .title {
+        grid-area: title;
+
+        text-align: center;
+    }
+
+    & > .posts {
+        grid-area: posts;
+    }
+}

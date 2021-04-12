@@ -1,0 +1,17 @@
+.SearchBar {
+    input {
+        &[type=text] {
+            width: 75%;
+        }
+
+        &[type=button] {
+            width: 25%;
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+
+    .formGroup {
+        border: $primary solid 1px;
+    }
+}

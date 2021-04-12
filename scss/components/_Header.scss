@@ -1,0 +1,39 @@
+.mainHeader {
+    background-color: $dark;
+
+    header {
+        @extend .py-1;
+
+        width: $widthOfContent;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        * {
+            color: #fff;
+        }
+
+        h1 {
+            font-family: "Lobster";
+            letter-spacing: 3px;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            align-self: flex-end;
+            width: 35%;
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                text-decoration: none;
+            }
+
+            .active {
+                border-bottom: 4px solid $primary;
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+.House {
+    $link-size: 1.5rem;
+    height: 100%;
+    width: 100%;
+    * {
+        color: $text-primary;
+    }
+
+    &.small {
+        height: 33%;
+
+        display: grid;
+        grid-template-columns: 45% auto;
+
+        & > div {
+            width: 100%;
+            height: 100%;
+
+            display: grid;
+            grid-template-rows: max-content auto;
+
+            a {
+                font-size: $link-size;
+                text-align: end;
+            }
+
+            table {
+                width: max-content;
+                height: 100%;
+                margin-left: auto;
+
+                td:nth-child(2) {
+                    text-align: end;
+
+                    padding-left: 4rem;
+                }
+            }
+        }
+    }
+
+    &.no-description {
+        display: grid;
+        grid-template-rows: max-content max-content 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1% 1%;
+        grid-template-areas:
+            "link link link link"
+            "mainImage mainImage mainImage mainImage"
+            "Thumbnail1 Thumbnail2 Thumbnail3 Thumbnail4"
+            "info1 . . info2";
+
+        a {
+            font-size: $link-size;
+            grid-area: link;
+        }
+
+        .mainImage {
+            grid-area: mainImage;
+        }
+
+        $spaces: (1, 2, 3, 4);
+        @each $space in $spaces {
+            .Thumbnail#{$space} {
+                grid-area: Thumbnail#{$space};
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        $spaces: (1, 2);
+        @each $space in $spaces {
+            & > .info#{$space} {
+                grid-area: info#{$space};
+                width: 100%;
+                height: 100%;
+
+                tbody {
+                    display: flex;
+                    flex-direction: column;
+
+                    tr {
+                        display: flex;
+                        justify-content: space-between;
+
+                        td {
+                            font-size: .8rem;
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.full {
+        @extend .no-description;
+        grid-template-rows: max-content max-content 1fr 1fr;
+        grid-template-areas:
+            "link link link link"
+            "mainImage mainImage mainImage mainImage"
+            "Thumbnail1 Thumbnail2 Thumbnail3 Thumbnail4"
+            "info1 . . info2"
+            "article article article article"
+            "article article article article";
+
+        .article {
+            grid-area: article;
+            display: grid;
+            grid-template-rows: max-content auto;
+            grid-template-areas: 
+                "title"
+                "text";
+
+            .title {
+                grid-area: title;
+                padding-top: 1rem;
+            }
+            .text {
+                grid-area: text;
+                padding-top: 1rem;
+            }
+        }
+
+        
+    }
+}

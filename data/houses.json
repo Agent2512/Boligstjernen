@@ -1,0 +1,21 @@
+[
+    {
+        "id": 287100,
+        "houseType": "Villa",
+        
+        "address": "birgits allé 8",
+        "zipCode": "5250",
+        "city": "odense sv",
+    
+        "houseSize": "172",
+        "grundSize": "1305",
+        "price": "2695000",
+
+        "mainImage": "1a.jpg",
+        "images": ["1a.jpg", "1b.jpg", "1c.jpg"],
+    
+        "title": "Indflytningsklar luksusejendom nær skov og strand.",
+        "text": "I byggeriet er der lagt vægt på enkle materialer. Det sker for at opnå et æstetisk rent udtryk, der danner en moderne kontrast til det naturskønne område. Ydervæggene udgør ensartede lyse flader på den grønne baggrund. Samtidig har arkitekten kælet for detaljerne. Boligen er orienteret mod syd/vest og har et boligareal på 172 m2 og indeholder: Stor entre, 2 værelser, toilet samt køkken-alrum med udgang til gårdhaven. På 1. sal findes en stor stue, bad, soveværelse samt forrum med skabe."
+    }
+    
+]

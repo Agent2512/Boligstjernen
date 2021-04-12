@@ -1,0 +1,19 @@
+#index {
+    @extend %main-grid;
+
+    & > aside > section {
+
+        & > * {
+            @extend .my-1;
+        }
+
+        ul > p {
+            color: $text-primary;
+            list-style: none;
+
+            &::before {
+                content: "● ";
+            }
+        }
+    }
+}
